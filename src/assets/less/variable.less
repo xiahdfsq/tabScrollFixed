@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+/**
+ * 自定义变量
+ */
+
+@bg-color: #f5f5f9; // app ground color
+@main-color: #00aaee; // such as a tag,button handle 
+@warning-color: #f4333c; // warning color
+@tip-color: #ff8208; // tip color 
+@default-color: #a5a5a5; // default value color 
+@power-color: #fff;
+@tab-color: #666;
+@main-border-color: #ddd; // main border line color such head
+
+@font-color-main: #333; // main font color
+@font-color-power: #fff; // font color in deep color background
+@font-tab-color: #666; // tab font color
+@bg-gray: #d9d9d9; //gray background
+// 数字
+// 尺寸
+
+@onerem: 100px;
+@border-radius: 0;
+@border-radius-lg: 5%;
+@border-radius-base: 4px;
+
+@bordercolor: #cfcfcf; 
+@border-t: -webkit-gradient(linear, left bottom, left top, color-stop(.5, rgba(0, 0, 0, 0)), color-stop(.5, @bordercolor));
+@border-b: -webkit-gradient(linear, left top, left bottom, color-stop(.5, rgba(0, 0, 0, 0)), color-stop(.5, @bordercolor));
+@border-l: -webkit-gradient(linear, right top, left top, color-stop(.5, rgba(0, 0, 0, 0)), color-stop(.5, @bordercolor));
+@border-r: -webkit-gradient(linear, left top, right top, color-stop(.5, rgba(0, 0, 0, 0)), color-stop(.5, @bordercolor));
+
+.warn-color{
+   color: @warning-color;
+}
+.mian-color{
+    color: @main-color;
+}
+.bg-gary{
+	background: @bg-gray;
+}
+@media only screen and (max-width:340px) {
+    .main-btn,.vux-header-title{
+        font-size: 16px;
+    }
+    .cell-left-size,.weui_cell_bd > p,.weui_label{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .cell-right-size,.weui_cell_ft,.weui_select,.weui_input,.weui_cell_bd > p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .note-size,.eui_cell_ft,.vux-header .vux-header-right,.wb-flex-item h3 {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .size-aid,.vux-label-desc,.weui_cells_title {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .smaller-size {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .weui_select ,.weui_input{
+        height: 18px;
+    }
+    .weui_cells {
+        line-height: 18px;
+    }
+}
+
+@media only screen and (min-width:341px) and (max-width:380px) {
+    .main-btn,.vux-header-title{
+        font-size: 17px;
+    }
+    .cell-left-size,.weui_label{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .cell-right-size,.weui_cell_ft,.weui_select,.weui_input,.weui_cell_bd > p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .note-size,.eui_cell_ft,.vux-header .vux-header-right,.wb-flex-item h3 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .size-aid,.vux-label-desc,.weui_cells_title {
+        font-size: 13px;
+        line-height: 19px;
+    }
+    .smaller-size {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .weui_select ,.weui_input {
+        height: 20px;
+    }
+    .weui_cells {
+        line-height: 20px;
+    }
+}
+
+@media only screen and (min-width:381px) {
+    .main-btn,.vux-header-title,{
+        font-size: 19px;
+    }
+    .cell-left-size,.weui_label{
+        font-size: 17px;
+        line-height: 22px;
+    }
+    .cell-right-size,.weui_cell_bd > p,.eui_cell_ft,.vux-header .vux-header-right,.wb-flex-item h3 ,.weui_cell_ft,.weui_select,.weui_input{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .cell-right-size{
+        font-size: 15px;
+    }
+    .size-aid,.vux-label-desc,.weui_cells_title {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .smaller-size {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .weui_select ,.weui_input {
+        height: 22px;
+    }
+    .weui_cells {
+        line-height: 22px;
+    }
+}

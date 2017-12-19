@@ -1,0 +1,10 @@
+{
+  "_comment": "注释，ajax配置",
+  "server": "/alipayService/",
+  "timeout": 60000,
+  "context": "",
+  "toastTimeout": 1500,
+  "refreshTime": 300000,
+  "openMock": true,
+  "version": "1.0.0.0"
+}

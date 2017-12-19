@@ -1,5 +1,8 @@
 <template>
-    <div class="page product-detail"> 
+    <div class="page product-detail">
+      <x-header style="background-color:#fff;">
+        <span>产品详情</span>
+      </x-header> 
     	<section class="product_bananer">
     		<x-img :src="src" :default-src="defaulImg" class="ximg-bananer" :offset="-100"></x-img>
     		<ul class="info-list">
@@ -75,7 +78,7 @@
 </template>
 
 <script>
-import { Tab, TabItem, XImg } from 'vux'
+import { XHeader, Tab, TabItem, XImg } from 'vux'
 const ClientHeight = screen.height / 3
 export default {
   name: 'ProductDetail',
@@ -98,7 +101,7 @@ export default {
     },
     screenScrollTo (index) {
       var dom = this.$refs.detailImg.querySelectorAll('.detailTitle')[index]
-      document.body.scrollTop = dom.offsetTop - 44
+      document.body.scrollTop = dom.offsetTop - 94
       console.log(dom.offsetTop)
       this.fixTab = true
     },
@@ -112,7 +115,7 @@ export default {
     },
     handleScroll () {
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-      var offsetTop = this.$refs.detailImg.offsetTop - 44
+      var offsetTop = this.$refs.detailImg.offsetTop - 94
       if (scrollTop >= offsetTop) {
         this.fixTab = true
         this.cacultHeight().forEach((item, index) => {
@@ -132,6 +135,6 @@ export default {
     this.fixTab = false
     window.removeEventListener('scroll', this.handleScroll)
   },
-  components: { Tab, TabItem, XImg }
+  components: { XHeader, Tab, TabItem, XImg }
 }
 </script>

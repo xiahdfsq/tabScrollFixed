@@ -5,8 +5,8 @@
  */
 
 //可实现带边框弧度的线条
-.border-radius( @border-line, @border-radius) {
-    border: 1px solid @border-line;
+.border-radius( @bordercolor, @border-radius) {
+    border: 1px solid @bordercolor;
     border-radius: @border-radius;
     @media screen and (-webkit-min-device-pixel-ratio: 2) {
         position: relative;
@@ -23,7 +23,7 @@
             padding: 1px;
             -webkit-box-sizing: border-box;
             pointer-events: none;
-            border: 1px solid @border-line;
+            border: 1px solid @bordercolor;
             border-radius: @border-radius;
         }
     }

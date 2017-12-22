@@ -11,58 +11,62 @@ html {
 }
 
 body {
-    font-family: PS-Helvetica, 'Sketch-Heiti SC', Helvetica, sans-serif, Arial;
+    font-family: Helvetica, Arial, sans-serif; 
     width: 100%;
     min-height: 100%;
     overflow-x: hidden;
     color: @font-color-main;
     background: @bg-color;
     font-size: .16rem;
-} 
-
-// 头部样式
-
-.vux-header {
-  background-color: #fff;
-  width: 100%;
-  h1.vux-header-title {
-    height: 44px;
-    line-height: 44px;
-    margin-left: .68rem!important;
-    margin: 0 .68rem;
-    color: @font-color-main;
-  }
-  .vux-header-left,
-  .vux-header-right {
-    top: 0;
-    height: 44px;
-    line-height: 44px;
-    width: auto;
-    a,
-    button {
-      color: @power-color;
-    }
-  }
-  .vux-header-left {
-    .left-arrow {
-      height: 44px;
-      top: 0;
-      left: 0;
-      &:before {
-        -webkit-transform: rotate(315deg);
-        -webkit-transform-origin: top left;
-        transform-origin: top left;
-        border-color: #353535;
-        width: 13px;
-        height: 13px;
-        top: 22px;
-        left: 0;
-      }
-    }
-  }
 }
+
+// 头部样式 
+.vux-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: #1c4a98;
+    width: 100%;
+    h1.vux-header-title {
+        height: 44px;
+        line-height: 44px;
+        margin-left: .68rem!important;
+        margin: 0 .68rem;
+        color: #fff;
+    }
+    .vux-header-left,
+    .vux-header-right {
+        top: 0;
+        height: 44px;
+        line-height: 44px;
+        width: auto;
+        a,
+        button {
+            color: @power-color;
+        }
+    }
+    .vux-header-left {
+        .left-arrow {
+            height: 44px;
+            top: 0;
+            left: 0;
+            &:before {
+                -webkit-transform: rotate(315deg);
+                -webkit-transform-origin: top left;
+                transform-origin: top left;
+                border-color: #fff;
+                width: 13px;
+                height: 13px;
+                top: 22px;
+                left: 0;
+            }
+        }
+    }
+}
+
 a {
-  color: @main-color;
+    color: @main-color;
 }
 
 // 可点击按钮颜色 主按钮
@@ -70,9 +74,9 @@ a {
     width: 100%;
     height: .45rem;
     line-height: .45rem;
-    border: none; 
+    border: none;
     color: #fff;
-    border-radius: .04rem;
+    border-radius: 4px;
     background-color: @main-color;
     &:after {
         width: 0;
@@ -84,6 +88,16 @@ a {
     &:active {
         color: #fff;
         background-color: #0091cb;
+    }
+    &.aid {
+        margin-top: .15rem;
+        color: @tab-color;
+        background-color: #fff;
+        .border-radius(#ddd, '4px')
+    }
+    &.defalut{ 
+        color: #d2d2d2;
+        background-color: #aaa;
     }
 }
 
@@ -120,11 +134,36 @@ a {
 }
 
 .pad-15 {
-    padding: 15px;
+    padding: .15rem;
+}
+
+.page {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding-bottom: 50px;
+    &.pd-none {
+        padding-bottom: 0;
+    }
 }
 
 .pad-100 {
     padding: 100px 15px;
+}
+
+.weui-tabbar {
+    position: fixed;
+    left: 0;
+    .weui-tabbar__item {
+        padding: 2px 0 0;
+    }
+    .weui-tabbar__label {
+        height: 21px;
+    }
+}
+
+.weui-tabbar__item.weui-bar__item_on .weui-tabbar__label {
+    color: #ff6f17;
 }
 
 // 底部tab标签
@@ -141,15 +180,16 @@ a {
         height: .45rem;
         line-height: .45rem;
         color: @main-color;
-        text-align: center;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         &.period {
-            flex: 0 0 1;
-            width: 50%;
+            padding:0 15px;
+            text-align: left;
+            flex: 1;
         }
         &.pay {
-            flex: 0 0 1;
-            width: 50%;
+            flex: 0 0 10em;
+            width: 10em;
+            text-align: center;
             background-color: @main-color;
             color: #fff;
         }
